@@ -313,12 +313,12 @@ export async function handleMessage(sock, msg, logger) {
     }
 
     try {
-      const apiKey = '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';
-      const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+      const apiKey = 'YOUR-API-KEY';
+      const response = await fetch('https://api.example.com/provider-example/v1/chat/completions', {
         method: 'POST',
         headers: { 'Authorization': `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          model: 'openai/gpt-oss-20b',
+          model: 'example/model',
           messages: [{ 
             role: 'user', 
             content: query }]
